@@ -89,7 +89,7 @@ if [ -f "$LOCAL_SOURCE_DIR/$POM_PATH/pom.xml" ]; then
   if [ ! -z `find -name $WAR_NAME` ]
   then
     echo "Moving built war file `find -name $WAR_NAME` into $DEPLOY_DIR for later deployment..."
-    mv `find -name $WAR_NAME` $DEPLOY_DIR/$WAR_NAME
+    mv `find -name $WAR_NAME` $DEPLOY_DIR/ROOT.war
   else
     echo "Aborting due to error : File not found, moving $WAR_NAME file, maybe it doesn't exist"
     exit 1
